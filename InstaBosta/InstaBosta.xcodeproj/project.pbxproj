@@ -54,6 +54,7 @@
 		0F864D222837F5A7001B76FE /* ProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D212837F5A7001B76FE /* ProfileRequest.swift */; };
 		0F864D252837F74F001B76FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D242837F74F001B76FE /* User.swift */; };
 		0F864D272837F769001B76FE /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D262837F769001B76FE /* Album.swift */; };
+		0F864D2928381E4C001B76FE /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D2828381E4C001B76FE /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		0F864D212837F5A7001B76FE /* ProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequest.swift; sourceTree = "<group>"; };
 		0F864D242837F74F001B76FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0F864D262837F769001B76FE /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		0F864D2828381E4C001B76FE /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				0F864CF92837C66B001B76FE /* UITableView+RegisterCell.swift */,
 				0F864CFB2837C693001B76FE /* UIImage+CornerRadius.swift */,
 				0F864CFD2837C6B8001B76FE /* CustomView.swift */,
+				0F864D2828381E4C001B76FE /* CustomButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				0F864CFE2837C6B8001B76FE /* CustomView.swift in Sources */,
 				0F864D132837F2E2001B76FE /* AlbumTableViewCell.swift in Sources */,
 				0F864CFC2837C693001B76FE /* UIImage+CornerRadius.swift in Sources */,
+				0F864D2928381E4C001B76FE /* CustomButton.swift in Sources */,
 				0F864D022837C78C001B76FE /* AppCoordinator.swift in Sources */,
 				0F0005352837B838007104B5 /* AppDelegate.swift in Sources */,
 				0F864D202837F4B2001B76FE /* ProfileInteractor.swift in Sources */,

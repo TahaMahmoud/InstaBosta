@@ -12,21 +12,24 @@ class ProfileViewController: UIViewController {
 
     internal let disposeBag = DisposeBag()
     var viewModel: ProfileViewModel!
-
+    var user: UserDataViewModel?
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     @IBOutlet weak var albumsTableView: UITableView!
     @IBOutlet weak var indicator: BPCircleActivityIndicator!
 
-    override func viewDidAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = false
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         
-        // setupTableView()
-        // bindTableView()
+        setupTableView()
+        bindTableView()
+        bindUserData()
         
-        // bindIndicator()
+        bindIndicator()
         bindErrorMessage()
         
         viewModel.viewDidLoad()
@@ -62,10 +65,22 @@ class ProfileViewController: UIViewController {
         
         albumsTableView.rx.itemSelected.subscribe {[weak self]  (indexPath) in
             guard let indexPath = indexPath.element else { return }
-            let cell = self?.albumsTableView.cellForRow(at: indexPath) as? AlbumTableViewCell
             self?.viewModel.didAlbumSelected(indexPath)
         }.disposed(by: disposeBag)
         
+    }
+    
+    func bindUserData() {
+        viewModel.currentUser.subscribe { [weak self] currentUser in
+            self?.user = currentUser.element
+            self?.renderUser()
+        }.disposed(by: disposeBag)
+    }
+    
+    func renderUser() {
+        userNameLabel.text = user?.name
+        addressLabel.text = user?.address
+        phoneLabel.text = user?.phone
     }
     
     func showIndicator() {
@@ -78,12 +93,19 @@ class ProfileViewController: UIViewController {
         indicator.stop()
     }
 
+    @IBAction func websitePressed(_ sender: Any) {
+        if let url = URL(string: "https://\(user?.website ?? "bosta.co/")") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    
 }
 
 extension ProfileViewController: UITableViewDelegate{
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 45
     }
     
 }

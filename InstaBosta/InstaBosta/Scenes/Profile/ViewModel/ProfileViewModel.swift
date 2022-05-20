@@ -30,7 +30,7 @@ class ProfileViewModel: ProfileViewModelOutput, ProfileViewModelInput {
     let disposeBag = DisposeBag()
     
     var selectedUser: UserDataViewModel?
-    var currentUser: PublishSubject<User> = .init()
+    var currentUser: PublishSubject<UserDataViewModel> = .init()
     var albums: BehaviorRelay<[AlbumCellViewModel]> = .init(value: [])
 
     var indicator: PublishSubject<Bool> = .init()
@@ -77,7 +77,7 @@ class ProfileViewModel: ProfileViewModelOutput, ProfileViewModelInput {
                 return
             }
             
-            self?.currentUser.onNext(currentUser)
+            self?.currentUser.onNext(UserDataViewModel(user: currentUser))
             
         }.disposed(by: disposeBag)
     }
@@ -90,7 +90,7 @@ class ProfileViewModel: ProfileViewModelOutput, ProfileViewModelInput {
                 return
             }
             
-            self?.selectedUser = UserDataViewModel(user: user)
+            self?.selectedUser = user
             
             self?.fetchAlbums()
         }.disposed(by: disposeBag)

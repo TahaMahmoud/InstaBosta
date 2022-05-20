@@ -42,6 +42,19 @@
 		0F864D062837CD39001B76FE /* Endponit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D052837CD39001B76FE /* Endponit.swift */; };
 		0F864D082837CD59001B76FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D072837CD59001B76FE /* NetworkManager.swift */; };
 		0F864D0A2837CD7D001B76FE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D092837CD7D001B76FE /* NetworkError.swift */; };
+		0F864D0D2837F211001B76FE /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D0C2837F211001B76FE /* ProfileCoordinator.swift */; };
+		0F864D132837F2E2001B76FE /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D112837F2E2001B76FE /* AlbumTableViewCell.swift */; };
+		0F864D142837F2E2001B76FE /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F864D122837F2E2001B76FE /* AlbumTableViewCell.xib */; };
+		0F864D172837F309001B76FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D152837F309001B76FE /* ProfileViewController.swift */; };
+		0F864D182837F309001B76FE /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F864D162837F309001B76FE /* ProfileViewController.xib */; };
+		0F864D1A2837F333001B76FE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D192837F333001B76FE /* ProfileViewModel.swift */; };
+		0F864D1C2837F360001B76FE /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D1B2837F360001B76FE /* UserDataViewModel.swift */; };
+		0F864D1E2837F383001B76FE /* AlbumCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D1D2837F383001B76FE /* AlbumCellViewModel.swift */; };
+		0F864D202837F4B2001B76FE /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D1F2837F4B2001B76FE /* ProfileInteractor.swift */; };
+		0F864D222837F5A7001B76FE /* ProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D212837F5A7001B76FE /* ProfileRequest.swift */; };
+		0F864D252837F74F001B76FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D242837F74F001B76FE /* User.swift */; };
+		0F864D272837F769001B76FE /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D262837F769001B76FE /* Album.swift */; };
+		0F864D2928381E4C001B76FE /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D2828381E4C001B76FE /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +106,19 @@
 		0F864D052837CD39001B76FE /* Endponit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endponit.swift; sourceTree = "<group>"; };
 		0F864D072837CD59001B76FE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0F864D092837CD7D001B76FE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0F864D0C2837F211001B76FE /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		0F864D112837F2E2001B76FE /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		0F864D122837F2E2001B76FE /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
+		0F864D152837F309001B76FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0F864D162837F309001B76FE /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		0F864D192837F333001B76FE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		0F864D1B2837F360001B76FE /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
+		0F864D1D2837F383001B76FE /* AlbumCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCellViewModel.swift; sourceTree = "<group>"; };
+		0F864D1F2837F4B2001B76FE /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		0F864D212837F5A7001B76FE /* ProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequest.swift; sourceTree = "<group>"; };
+		0F864D242837F74F001B76FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0F864D262837F769001B76FE /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		0F864D2828381E4C001B76FE /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +229,7 @@
 				0F864CF92837C66B001B76FE /* UITableView+RegisterCell.swift */,
 				0F864CFB2837C693001B76FE /* UIImage+CornerRadius.swift */,
 				0F864CFD2837C6B8001B76FE /* CustomView.swift */,
+				0F864D2828381E4C001B76FE /* CustomButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -288,6 +315,7 @@
 		0F0005702837B9C6007104B5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0F864D0B2837F1D6001B76FE /* Profile */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -331,6 +359,57 @@
 				0F0005A82837BF90007104B5 /* CircleLayer.swift */,
 			);
 			path = BPCircleActivityIndicator;
+			sourceTree = "<group>";
+		};
+		0F864D0B2837F1D6001B76FE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0F864D232837F712001B76FE /* Model */,
+				0F864D102837F2C0001B76FE /* Interactor */,
+				0F864D0F2837F2B4001B76FE /* ViewModel */,
+				0F864D0E2837F2AF001B76FE /* View */,
+				0F864D0C2837F211001B76FE /* ProfileCoordinator.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0F864D0E2837F2AF001B76FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F864D112837F2E2001B76FE /* AlbumTableViewCell.swift */,
+				0F864D122837F2E2001B76FE /* AlbumTableViewCell.xib */,
+				0F864D152837F309001B76FE /* ProfileViewController.swift */,
+				0F864D162837F309001B76FE /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F864D0F2837F2B4001B76FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F864D192837F333001B76FE /* ProfileViewModel.swift */,
+				0F864D1B2837F360001B76FE /* UserDataViewModel.swift */,
+				0F864D1D2837F383001B76FE /* AlbumCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0F864D102837F2C0001B76FE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0F864D1F2837F4B2001B76FE /* ProfileInteractor.swift */,
+				0F864D212837F5A7001B76FE /* ProfileRequest.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0F864D232837F712001B76FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F864D242837F74F001B76FE /* User.swift */,
+				0F864D262837F769001B76FE /* Album.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +534,8 @@
 				0F0005412837B839007104B5 /* LaunchScreen.storyboard in Resources */,
 				0F00053E2837B839007104B5 /* Assets.xcassets in Resources */,
 				0F0005A22837BF6A007104B5 /* CRNotificationsMedia.xcassets in Resources */,
+				0F864D182837F309001B76FE /* ProfileViewController.xib in Resources */,
+				0F864D142837F2E2001B76FE /* AlbumTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,23 +560,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F864D0D2837F211001B76FE /* ProfileCoordinator.swift in Sources */,
 				0F864CFE2837C6B8001B76FE /* CustomView.swift in Sources */,
+				0F864D132837F2E2001B76FE /* AlbumTableViewCell.swift in Sources */,
 				0F864CFC2837C693001B76FE /* UIImage+CornerRadius.swift in Sources */,
+				0F864D2928381E4C001B76FE /* CustomButton.swift in Sources */,
 				0F864D022837C78C001B76FE /* AppCoordinator.swift in Sources */,
 				0F0005352837B838007104B5 /* AppDelegate.swift in Sources */,
+				0F864D202837F4B2001B76FE /* ProfileInteractor.swift in Sources */,
+				0F864D172837F309001B76FE /* ProfileViewController.swift in Sources */,
+				0F864D252837F74F001B76FE /* User.swift in Sources */,
+				0F864D1E2837F383001B76FE /* AlbumCellViewModel.swift in Sources */,
 				0F00059E2837BF6A007104B5 /* DeviceManager.swift in Sources */,
+				0F864D272837F769001B76FE /* Album.swift in Sources */,
 				0F864CFA2837C66B001B76FE /* UITableView+RegisterCell.swift in Sources */,
 				0F0005A92837BF90007104B5 /* CircleLotationSet.swift in Sources */,
 				0F0005AB2837BF90007104B5 /* CommonAnimation.swift in Sources */,
 				0F864D002837C713001B76FE /* Helper.swift in Sources */,
 				0F00059D2837BF6A007104B5 /* CRNotification.swift in Sources */,
 				0F0005A12837BF6A007104B5 /* Colors.swift in Sources */,
+				0F864D1A2837F333001B76FE /* ProfileViewModel.swift in Sources */,
 				0F00059F2837BF6A007104B5 /* CRNotifications.swift in Sources */,
+				0F864D222837F5A7001B76FE /* ProfileRequest.swift in Sources */,
 				0F864D082837CD59001B76FE /* NetworkManager.swift in Sources */,
 				0F0005AD2837BF90007104B5 /* CircleLayer.swift in Sources */,
 				0F0005372837B838007104B5 /* SceneDelegate.swift in Sources */,
 				0F864D0A2837CD7D001B76FE /* NetworkError.swift in Sources */,
 				0F0005AA2837BF90007104B5 /* CircleLotateLayer.swift in Sources */,
+				0F864D1C2837F360001B76FE /* UserDataViewModel.swift in Sources */,
 				0F864D062837CD39001B76FE /* Endponit.swift in Sources */,
 				0F0005A02837BF6A007104B5 /* CRNotificationType.swift in Sources */,
 				0F0005AC2837BF90007104B5 /* BPCircleActivityIndicator.swift in Sources */,

@@ -33,7 +33,7 @@ class AppCoordinator: Coordinator {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
                 
-        // let profileCoordinator = ProfileCoordinator(navigationController: navigationController)
-        // coordinate(to: profileCoordinator)
+        let profileCoordinator = ProfileCoordinator(navigationController: navigationController)
+        coordinate(to: profileCoordinator)
     }
 }

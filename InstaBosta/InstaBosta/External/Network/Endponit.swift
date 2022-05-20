@@ -14,6 +14,6 @@ protocol BaseEndpoint: TargetType {
 
 extension BaseEndpoint {
     var baseURL: URL {
-        return URL(string: Constants.devBaseURL)!
+        return URL(string: Constants.URL.devBaseURL)!
     }
 }

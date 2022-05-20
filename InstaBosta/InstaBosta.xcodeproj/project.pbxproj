@@ -33,6 +33,15 @@
 		0F864CF42837C5DA001B76FE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0F864CF32837C5DA001B76FE /* RxCocoa */; };
 		0F864CF62837C5DA001B76FE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0F864CF52837C5DA001B76FE /* RxRelay */; };
 		0F864CF82837C5DA001B76FE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0F864CF72837C5DA001B76FE /* RxSwift */; };
+		0F864CFA2837C66B001B76FE /* UITableView+RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864CF92837C66B001B76FE /* UITableView+RegisterCell.swift */; };
+		0F864CFC2837C693001B76FE /* UIImage+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864CFB2837C693001B76FE /* UIImage+CornerRadius.swift */; };
+		0F864CFE2837C6B8001B76FE /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864CFD2837C6B8001B76FE /* CustomView.swift */; };
+		0F864D002837C713001B76FE /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864CFF2837C713001B76FE /* Helper.swift */; };
+		0F864D022837C78C001B76FE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D012837C78C001B76FE /* AppCoordinator.swift */; };
+		0F864D042837CD0F001B76FE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D032837CD0F001B76FE /* Constants.swift */; };
+		0F864D062837CD39001B76FE /* Endponit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D052837CD39001B76FE /* Endponit.swift */; };
+		0F864D082837CD59001B76FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D072837CD59001B76FE /* NetworkManager.swift */; };
+		0F864D0A2837CD7D001B76FE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F864D092837CD7D001B76FE /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +84,15 @@
 		0F0005A62837BF90007104B5 /* CommonAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAnimation.swift; sourceTree = "<group>"; };
 		0F0005A72837BF90007104B5 /* BPCircleActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPCircleActivityIndicator.swift; sourceTree = "<group>"; };
 		0F0005A82837BF90007104B5 /* CircleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayer.swift; sourceTree = "<group>"; };
+		0F864CF92837C66B001B76FE /* UITableView+RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCell.swift"; sourceTree = "<group>"; };
+		0F864CFB2837C693001B76FE /* UIImage+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CornerRadius.swift"; sourceTree = "<group>"; };
+		0F864CFD2837C6B8001B76FE /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		0F864CFF2837C713001B76FE /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		0F864D012837C78C001B76FE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0F864D032837CD0F001B76FE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0F864D052837CD39001B76FE /* Endponit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endponit.swift; sourceTree = "<group>"; };
+		0F864D072837CD59001B76FE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0F864D092837CD7D001B76FE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +192,7 @@
 				0F0005682837B958007104B5 /* Libraries */,
 				0F0005672837B951007104B5 /* Utils */,
 				0F0005662837B94B007104B5 /* UI */,
+				0F864CFF2837C713001B76FE /* Helper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +200,9 @@
 		0F0005662837B94B007104B5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0F864CF92837C66B001B76FE /* UITableView+RegisterCell.swift */,
+				0F864CFB2837C693001B76FE /* UIImage+CornerRadius.swift */,
+				0F864CFD2837C6B8001B76FE /* CustomView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -239,6 +261,7 @@
 		0F00056D2837B98F007104B5 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				0F864D012837C78C001B76FE /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -254,6 +277,10 @@
 		0F00056F2837B9AF007104B5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				0F864D032837CD0F001B76FE /* Constants.swift */,
+				0F864D052837CD39001B76FE /* Endponit.swift */,
+				0F864D072837CD59001B76FE /* NetworkManager.swift */,
+				0F864D092837CD7D001B76FE /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -452,18 +479,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F864CFE2837C6B8001B76FE /* CustomView.swift in Sources */,
+				0F864CFC2837C693001B76FE /* UIImage+CornerRadius.swift in Sources */,
+				0F864D022837C78C001B76FE /* AppCoordinator.swift in Sources */,
 				0F0005352837B838007104B5 /* AppDelegate.swift in Sources */,
 				0F00059E2837BF6A007104B5 /* DeviceManager.swift in Sources */,
+				0F864CFA2837C66B001B76FE /* UITableView+RegisterCell.swift in Sources */,
 				0F0005A92837BF90007104B5 /* CircleLotationSet.swift in Sources */,
 				0F0005AB2837BF90007104B5 /* CommonAnimation.swift in Sources */,
+				0F864D002837C713001B76FE /* Helper.swift in Sources */,
 				0F00059D2837BF6A007104B5 /* CRNotification.swift in Sources */,
 				0F0005A12837BF6A007104B5 /* Colors.swift in Sources */,
 				0F00059F2837BF6A007104B5 /* CRNotifications.swift in Sources */,
+				0F864D082837CD59001B76FE /* NetworkManager.swift in Sources */,
 				0F0005AD2837BF90007104B5 /* CircleLayer.swift in Sources */,
 				0F0005372837B838007104B5 /* SceneDelegate.swift in Sources */,
+				0F864D0A2837CD7D001B76FE /* NetworkError.swift in Sources */,
 				0F0005AA2837BF90007104B5 /* CircleLotateLayer.swift in Sources */,
+				0F864D062837CD39001B76FE /* Endponit.swift in Sources */,
 				0F0005A02837BF6A007104B5 /* CRNotificationType.swift in Sources */,
 				0F0005AC2837BF90007104B5 /* BPCircleActivityIndicator.swift in Sources */,
+				0F864D042837CD0F001B76FE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,25 @@
 		0F00054C2837B83A007104B5 /* InstaBostaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00054B2837B83A007104B5 /* InstaBostaTests.swift */; };
 		0F0005562837B83A007104B5 /* InstaBostaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005552837B83A007104B5 /* InstaBostaUITests.swift */; };
 		0F0005582837B83A007104B5 /* InstaBostaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005572837B83A007104B5 /* InstaBostaUITestsLaunchTests.swift */; };
+		0F0005882837BCD8007104B5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0F0005872837BCD8007104B5 /* Kingfisher */; };
+		0F00058D2837BF12007104B5 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0F00058C2837BF12007104B5 /* CombineMoya */; };
+		0F00058F2837BF12007104B5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0F00058E2837BF12007104B5 /* Moya */; };
+		0F0005912837BF12007104B5 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0F0005902837BF12007104B5 /* ReactiveMoya */; };
+		0F0005932837BF12007104B5 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0F0005922837BF12007104B5 /* RxMoya */; };
+		0F00059D2837BF6A007104B5 /* CRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005962837BF6A007104B5 /* CRNotification.swift */; };
+		0F00059E2837BF6A007104B5 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005972837BF6A007104B5 /* DeviceManager.swift */; };
+		0F00059F2837BF6A007104B5 /* CRNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005982837BF6A007104B5 /* CRNotifications.swift */; };
+		0F0005A02837BF6A007104B5 /* CRNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005992837BF6A007104B5 /* CRNotificationType.swift */; };
+		0F0005A12837BF6A007104B5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F00059A2837BF6A007104B5 /* Colors.swift */; };
+		0F0005A22837BF6A007104B5 /* CRNotificationsMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F00059C2837BF6A007104B5 /* CRNotificationsMedia.xcassets */; };
+		0F0005A92837BF90007104B5 /* CircleLotationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005A42837BF90007104B5 /* CircleLotationSet.swift */; };
+		0F0005AA2837BF90007104B5 /* CircleLotateLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005A52837BF90007104B5 /* CircleLotateLayer.swift */; };
+		0F0005AB2837BF90007104B5 /* CommonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005A62837BF90007104B5 /* CommonAnimation.swift */; };
+		0F0005AC2837BF90007104B5 /* BPCircleActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005A72837BF90007104B5 /* BPCircleActivityIndicator.swift */; };
+		0F0005AD2837BF90007104B5 /* CircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0005A82837BF90007104B5 /* CircleLayer.swift */; };
+		0F864CF42837C5DA001B76FE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0F864CF32837C5DA001B76FE /* RxCocoa */; };
+		0F864CF62837C5DA001B76FE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0F864CF52837C5DA001B76FE /* RxRelay */; };
+		0F864CF82837C5DA001B76FE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0F864CF72837C5DA001B76FE /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +64,17 @@
 		0F0005512837B83A007104B5 /* InstaBostaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaBostaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0005552837B83A007104B5 /* InstaBostaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaBostaUITests.swift; sourceTree = "<group>"; };
 		0F0005572837B83A007104B5 /* InstaBostaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaBostaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0F0005962837BF6A007104B5 /* CRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotification.swift; sourceTree = "<group>"; };
+		0F0005972837BF6A007104B5 /* DeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		0F0005982837BF6A007104B5 /* CRNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotifications.swift; sourceTree = "<group>"; };
+		0F0005992837BF6A007104B5 /* CRNotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotificationType.swift; sourceTree = "<group>"; };
+		0F00059A2837BF6A007104B5 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0F00059C2837BF6A007104B5 /* CRNotificationsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CRNotificationsMedia.xcassets; sourceTree = "<group>"; };
+		0F0005A42837BF90007104B5 /* CircleLotationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLotationSet.swift; sourceTree = "<group>"; };
+		0F0005A52837BF90007104B5 /* CircleLotateLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLotateLayer.swift; sourceTree = "<group>"; };
+		0F0005A62837BF90007104B5 /* CommonAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAnimation.swift; sourceTree = "<group>"; };
+		0F0005A72837BF90007104B5 /* BPCircleActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPCircleActivityIndicator.swift; sourceTree = "<group>"; };
+		0F0005A82837BF90007104B5 /* CircleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +82,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F864CF42837C5DA001B76FE /* RxCocoa in Frameworks */,
+				0F0005932837BF12007104B5 /* RxMoya in Frameworks */,
+				0F864CF62837C5DA001B76FE /* RxRelay in Frameworks */,
+				0F00058D2837BF12007104B5 /* CombineMoya in Frameworks */,
+				0F00058F2837BF12007104B5 /* Moya in Frameworks */,
+				0F0005912837BF12007104B5 /* ReactiveMoya in Frameworks */,
+				0F864CF82837C5DA001B76FE /* RxSwift in Frameworks */,
+				0F0005882837BCD8007104B5 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +195,8 @@
 		0F0005682837B958007104B5 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				0F0005A32837BF90007104B5 /* BPCircleActivityIndicator */,
+				0F0005942837BF6A007104B5 /* CRNotifications */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -225,6 +265,47 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		0F0005942837BF6A007104B5 /* CRNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				0F0005952837BF6A007104B5 /* Classes */,
+				0F00059B2837BF6A007104B5 /* Assets */,
+			);
+			path = CRNotifications;
+			sourceTree = "<group>";
+		};
+		0F0005952837BF6A007104B5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0F0005962837BF6A007104B5 /* CRNotification.swift */,
+				0F0005972837BF6A007104B5 /* DeviceManager.swift */,
+				0F0005982837BF6A007104B5 /* CRNotifications.swift */,
+				0F0005992837BF6A007104B5 /* CRNotificationType.swift */,
+				0F00059A2837BF6A007104B5 /* Colors.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0F00059B2837BF6A007104B5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0F00059C2837BF6A007104B5 /* CRNotificationsMedia.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0F0005A32837BF90007104B5 /* BPCircleActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				0F0005A42837BF90007104B5 /* CircleLotationSet.swift */,
+				0F0005A52837BF90007104B5 /* CircleLotateLayer.swift */,
+				0F0005A62837BF90007104B5 /* CommonAnimation.swift */,
+				0F0005A72837BF90007104B5 /* BPCircleActivityIndicator.swift */,
+				0F0005A82837BF90007104B5 /* CircleLayer.swift */,
+			);
+			path = BPCircleActivityIndicator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +322,16 @@
 			dependencies = (
 			);
 			name = InstaBosta;
+			packageProductDependencies = (
+				0F0005872837BCD8007104B5 /* Kingfisher */,
+				0F00058C2837BF12007104B5 /* CombineMoya */,
+				0F00058E2837BF12007104B5 /* Moya */,
+				0F0005902837BF12007104B5 /* ReactiveMoya */,
+				0F0005922837BF12007104B5 /* RxMoya */,
+				0F864CF32837C5DA001B76FE /* RxCocoa */,
+				0F864CF52837C5DA001B76FE /* RxRelay */,
+				0F864CF72837C5DA001B76FE /* RxSwift */,
+			);
 			productName = InstaBosta;
 			productReference = 0F0005312837B838007104B5 /* InstaBosta.app */;
 			productType = "com.apple.product-type.application";
@@ -313,6 +404,11 @@
 				Base,
 			);
 			mainGroup = 0F0005282837B838007104B5;
+			packageReferences = (
+				0F0005862837BCD8007104B5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				0F00058B2837BF12007104B5 /* XCRemoteSwiftPackageReference "Moya" */,
+				0F864CF22837C5DA001B76FE /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 0F0005322837B838007104B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,6 +427,7 @@
 			files = (
 				0F0005412837B839007104B5 /* LaunchScreen.storyboard in Resources */,
 				0F00053E2837B839007104B5 /* Assets.xcassets in Resources */,
+				0F0005A22837BF6A007104B5 /* CRNotificationsMedia.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +453,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F0005352837B838007104B5 /* AppDelegate.swift in Sources */,
+				0F00059E2837BF6A007104B5 /* DeviceManager.swift in Sources */,
+				0F0005A92837BF90007104B5 /* CircleLotationSet.swift in Sources */,
+				0F0005AB2837BF90007104B5 /* CommonAnimation.swift in Sources */,
+				0F00059D2837BF6A007104B5 /* CRNotification.swift in Sources */,
+				0F0005A12837BF6A007104B5 /* Colors.swift in Sources */,
+				0F00059F2837BF6A007104B5 /* CRNotifications.swift in Sources */,
+				0F0005AD2837BF90007104B5 /* CircleLayer.swift in Sources */,
 				0F0005372837B838007104B5 /* SceneDelegate.swift in Sources */,
+				0F0005AA2837BF90007104B5 /* CircleLotateLayer.swift in Sources */,
+				0F0005A02837BF6A007104B5 /* CRNotificationType.swift in Sources */,
+				0F0005AC2837BF90007104B5 /* BPCircleActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GLBMX2MFLL;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaBosta/Common/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -556,6 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GLBMX2MFLL;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaBosta/Common/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -692,6 +801,76 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F0005862837BCD8007104B5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		0F00058B2837BF12007104B5 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		0F864CF22837C5DA001B76FE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F0005872837BCD8007104B5 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F0005862837BCD8007104B5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		0F00058C2837BF12007104B5 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F00058B2837BF12007104B5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		0F00058E2837BF12007104B5 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F00058B2837BF12007104B5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		0F0005902837BF12007104B5 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F00058B2837BF12007104B5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		0F0005922837BF12007104B5 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F00058B2837BF12007104B5 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		0F864CF32837C5DA001B76FE /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F864CF22837C5DA001B76FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		0F864CF52837C5DA001B76FE /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F864CF22837C5DA001B76FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		0F864CF72837C5DA001B76FE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F864CF22837C5DA001B76FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F0005292837B838007104B5 /* Project object */;
 }

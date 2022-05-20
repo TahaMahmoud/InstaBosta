@@ -16,8 +16,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var albumsTableView: UITableView!
     @IBOutlet weak var indicator: BPCircleActivityIndicator!
 
-    let refreshControl = UIRefreshControl()
-
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
     }
@@ -27,29 +25,12 @@ class ProfileViewController: UIViewController {
         
         // setupTableView()
         // bindTableView()
-        // setupRefershControl()
         
-        bindIndicator()
+        // bindIndicator()
         bindErrorMessage()
         
         viewModel.viewDidLoad()
 
-    }
-
-    func setupRefershControl() {
-        refreshControl.tintColor = .white
-        if #available(iOS 10.0, *) {
-            albumsTableView.refreshControl = refreshControl
-        } else {
-            albumsTableView.addSubview(refreshControl)
-        }
-
-        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
-    }
-    
-    @objc private func refresh(_ sender: Any) {
-        viewModel.viewDidLoad()
-        refreshControl.endRefreshing()
     }
     
     func bindIndicator() {

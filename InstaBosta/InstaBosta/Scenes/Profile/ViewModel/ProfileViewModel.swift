@@ -28,7 +28,9 @@ class ProfileViewModel: ProfileViewModelOutput, ProfileViewModelInput {
     
     private let coordinator: ProfileCoordinatorProtocol
     let disposeBag = DisposeBag()
-        
+    
+    var selectedUser: UserDataViewModel?
+    var currentUser: PublishSubject<User> = .init()
     var albums: BehaviorRelay<[AlbumCellViewModel]> = .init(value: [])
 
     var indicator: PublishSubject<Bool> = .init()
@@ -42,7 +44,15 @@ class ProfileViewModel: ProfileViewModelOutput, ProfileViewModelInput {
     }
     
     func viewDidLoad(){
-        print("Initialized")
+        
+        if Helper.checkConnection() {
+            indicator.onNext(true)
+            fetchUsers()
+            bindFetchAlbums()
+        } else {
+            error.onNext("Check Internet Connection")
+        }
+
     }
     
     func didAlbumSelected(_ indexPath: IndexPath) {
@@ -50,10 +60,62 @@ class ProfileViewModel: ProfileViewModelOutput, ProfileViewModelInput {
     }
 
     func userDataViewModel() -> UserDataViewModel {
-        return UserDataViewModel(user: User(id: 0, name: "", username: "", email: "", address: Address(street: "", suite: "", city: "", zipcode: "", geo: Geo(lat: "", lng: "")), phone: "", website: "", company: Company(name: "", catchPhrase: "", bs: "")))
+        return selectedUser ?? UserDataViewModel(user: User(id: 0, name: "", username: "", email: "", address: Address(street: "", suite: "", city: "", zipcode: "", geo: Geo(lat: "", lng: "")), phone: "", website: "", company: Company(name: "", catchPhrase: "", bs: "")))
     }
     
     func albumViewModelAtIndexPath(_ indexPath: IndexPath) -> AlbumCellViewModel {
-        return AlbumCellViewModel(album: Album(userID: 0, id: 0, title: ""))
+        return albums.value[indexPath.row]
     }
+    
+    private func fetchUsers() {
+        profileInteractor.fetchUsers().subscribe{ [weak self] (response) in
+            self?.indicator.onNext(false)
+
+            // Select Random User
+            guard let currentUser = response.element?.randomElement() else {
+                self?.error.onNext("Can't Fetch Users")
+                return
+            }
+            
+            self?.currentUser.onNext(currentUser)
+            
+        }.disposed(by: disposeBag)
+    }
+    
+    private func bindFetchAlbums() {
+        currentUser.subscribe { [weak self] user in
+            
+            guard let user = user.element else {
+                self?.error.onNext("Can't Fetch Users")
+                return
+            }
+            
+            self?.selectedUser = UserDataViewModel(user: user)
+            
+            self?.fetchAlbums()
+        }.disposed(by: disposeBag)
+    }
+    
+    private func fetchAlbums() {
+        
+        guard let userID = selectedUser?.id else {
+            error.onNext("Can't Fetch Albums")
+            return
+        }
+        
+        profileInteractor.fetchAlbums(userID: userID).subscribe{ [weak self] (response) in
+            self?.indicator.onNext(false)
+            
+            // Create Album Cell View Model From Response
+            var albums: [AlbumCellViewModel] = []
+            for album in response.element ?? [] {
+                albums.append(AlbumCellViewModel(album: album))
+            }
+            
+            self?.albums.accept(albums)
+            
+        }.disposed(by: disposeBag)
+
+    }
+
 }

@@ -21,9 +21,13 @@ class PhotosListViewController: UIViewController {
 
     @IBOutlet weak var searchText: UITextField!
         
+    @IBOutlet weak var scrollView: ImageScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupZoomScrollView()
+        
         bindAlbumTitle()
         
         setupCollectionView()
@@ -37,7 +41,14 @@ class PhotosListViewController: UIViewController {
         viewModel.viewDidLoad()
 
     }
-
+    
+    func setupZoomScrollView() {
+        scrollView.setup()
+        scrollView.isHidden = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        scrollView.addGestureRecognizer(tap)
+    }
+    
     func bindIndicator() {
         viewModel.indicator.subscribe { [weak self] status in
             status ? self?.showIndicator() : self?.hideIndicator()
@@ -73,27 +84,23 @@ class PhotosListViewController: UIViewController {
         
         photosCollectionView.rx.itemSelected.subscribe {[weak self]  (indexPath) in
             guard let indexPath = indexPath.element else { return }
-            let cell = self?.photosCollectionView.cellForItem(at: indexPath) as? PhotoCollectionViewCell
-            self?.showFullScreen(photoView: cell?.photoImageView ?? UIImageView())
+            let photo = self?.viewModel.photoViewModelAtIndexPath(indexPath)
+            self?.showFullScreen(photoURL: photo?.photoURL ?? "")
         }.disposed(by: disposeBag)
         
     }
 
-    func showFullScreen(photoView: UIImageView) {
-        let newImageView = UIImageView(image: photoView.image)
-        newImageView.frame = UIScreen.main.bounds
-        newImageView.backgroundColor = .black
-        newImageView.contentMode = .scaleAspectFit
-        newImageView.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
-        newImageView.addGestureRecognizer(tap)
-        self.view.addSubview(newImageView)
-        self.navigationController?.isNavigationBarHidden = true
-        self.tabBarController?.tabBar.isHidden = true
+    func showFullScreen(photoURL: String) {
+        guard let imageURL = URL(string: photoURL ) else {return}
+        let imageView = UIImageView()
+        imageView.kf.setImage(with: imageURL)
+        guard let image = imageView.image else { return }
+        scrollView.display(image: image)
+        scrollView.isHidden = false
     }
 
     @objc func dismissFullscreenImage(sender: UITapGestureRecognizer) {
-        sender.view?.removeFromSuperview()
+        scrollView.isHidden = true
     }
     
     func showIndicator() {

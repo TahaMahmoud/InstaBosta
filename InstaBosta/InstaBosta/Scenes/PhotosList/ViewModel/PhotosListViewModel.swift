@@ -68,9 +68,7 @@ class PhotosListViewModel: PhotosListViewModelInput, PhotosListViewModelOutput {
                 
         photosListInteractor.fetchPhotos(albumID: albumID).subscribe{ [weak self] (response) in
             self?.indicator.onNext(false)
-            
-            print(response)
-            
+                
             // Create Album Cell View Model From Response
             var photos: [PhotoCellViewModel] = []
             for photo in response.element ?? [] {

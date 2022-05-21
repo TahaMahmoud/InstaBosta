@@ -14,16 +14,25 @@ class ProfileViewController: UIViewController {
     var viewModel: ProfileViewModel!
     var user: UserDataViewModel?
     
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var visitWebsiteButton: CustomButton!
     
+    @IBOutlet weak var albumsLabel: UILabel!
+    @IBOutlet weak var separator: UIView!
+
     @IBOutlet weak var albumsTableView: UITableView!
     @IBOutlet weak var indicator: BPCircleActivityIndicator!
 
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
         
         setupTableView()
         bindTableView()
@@ -81,6 +90,10 @@ class ProfileViewController: UIViewController {
         userNameLabel.text = user?.name
         addressLabel.text = user?.address
         phoneLabel.text = user?.phone
+        photoImageView.isHidden = false
+        visitWebsiteButton.isHidden = false
+        albumsLabel.isHidden = false
+        separator.isHidden = false
     }
     
     func showIndicator() {

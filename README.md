@@ -28,7 +28,7 @@ Using [jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)
 
 | Launch Screen | Profile     | PhotosList     | Photo Full Screen     |
 | :-------- | :------- | :-------     | :-------     |
-| <img src="/Screenshots/LaunchScreen.png" width="200" height="400">        | <img src="/Screenshots/Profile.png" width="200" height="400">       | <img src="/Screenshots/PhotosList.png" width="200" height="400">       | <img src="/Screenshots/FullScreen.png" width="200" height="400">       |
+| <img src="/Screenshots/Launch.png" width="200" height="400">        | <img src="/Screenshots/Profile.png" width="200" height="400">       | <img src="/Screenshots/PhotosList.png" width="200" height="400">       | <img src="/Screenshots/FullScreen.png" width="200" height="400">       |
 
 | Photo Full Screen (Zoom) | Photo Full Screen (Share)     | Search     | Loading     |
 | :-------- | :------- | :-------     | :-------     |

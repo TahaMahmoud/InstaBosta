@@ -1,6 +1,6 @@
 # InstaBosta
 InstaBosta is a simple iOS application, it retrieves users (and select random user), albums and photos from free API [jsonplaceholder.typicode.com] and display it for the user, and allow the user to view album details and explore photos inside this album, User can also search in photos of the album. 
-User can view photo in full screen mode and share it.
+User can view photo in full screen mode, zoom it and share it.
 
 Using [jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)
 

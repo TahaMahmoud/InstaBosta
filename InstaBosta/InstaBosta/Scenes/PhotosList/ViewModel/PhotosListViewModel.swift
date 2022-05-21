@@ -21,6 +21,8 @@ protocol PhotosListViewModelInput {
     func viewDidLoad()
     func backPressed()
     
+    func search(searchText: String)
+    
 }
 
 class PhotosListViewModel: PhotosListViewModelInput, PhotosListViewModelOutput {
@@ -33,7 +35,8 @@ class PhotosListViewModel: PhotosListViewModelInput, PhotosListViewModelOutput {
     
     var albumTitle: PublishSubject<String> = .init()
     var photos: BehaviorRelay<[PhotoCellViewModel]> = .init(value: [])
-
+    var fetchedPhots: [PhotoCellViewModel] = []
+    
     var indicator: PublishSubject<Bool> = .init()
     var error: PublishSubject<String> = .init()
     
@@ -65,6 +68,9 @@ class PhotosListViewModel: PhotosListViewModelInput, PhotosListViewModelOutput {
                 
         photosListInteractor.fetchPhotos(albumID: albumID).subscribe{ [weak self] (response) in
             self?.indicator.onNext(false)
+            
+            print(response)
+            
             // Create Album Cell View Model From Response
             var photos: [PhotoCellViewModel] = []
             for photo in response.element ?? [] {
@@ -72,8 +78,22 @@ class PhotosListViewModel: PhotosListViewModelInput, PhotosListViewModelOutput {
             }
             
             self?.photos.accept(photos)
+            self?.fetchedPhots = photos
             
         }.disposed(by: disposeBag)
+    }
+    
+    func search(searchText: String) {
+                
+        photos.accept([])
+                
+        if searchText != "" {
+            print(searchText)
+            photos.accept(fetchedPhots.filter{ $0.title?.contains(searchText) ?? false})
+            print(photos.value)
+        } else {
+            photos.accept(fetchedPhots)
+        }
     }
     
     private func renderAlbumData() {

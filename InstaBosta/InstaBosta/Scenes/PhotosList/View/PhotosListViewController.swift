@@ -109,8 +109,8 @@ class PhotosListViewController: UIViewController {
     func bindSearch() {
         searchText.rx.text.orEmpty
             .throttle(RxTimeInterval.seconds(2), latest: true, scheduler: MainScheduler.instance)
-                .subscribe(onNext: { searchValue in
-
+                .subscribe(onNext: { [weak self] searchValue in
+                    self?.viewModel.search(searchText: searchValue)
                 }, onDisposed: nil)
             .disposed(by: disposeBag)
     }

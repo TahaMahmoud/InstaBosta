@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell" customModule="InstaBosta" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="306" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="306" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bosta_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Rbe-4D-Fq3" customClass="CornerRadiusImage" customModule="InstaBosta" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="306" height="300"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Rbe-4D-Fq3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3cT-kY-cq3"/>
+                <constraint firstAttribute="trailing" secondItem="Rbe-4D-Fq3" secondAttribute="trailing" id="U7E-iv-vQ2"/>
+                <constraint firstAttribute="bottom" secondItem="Rbe-4D-Fq3" secondAttribute="bottom" id="WCx-fU-3k1"/>
+                <constraint firstItem="Rbe-4D-Fq3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xVK-7I-Whn"/>
+            </constraints>
+            <size key="customSize" width="306" height="300"/>
+            <connections>
+                <outlet property="photoImageView" destination="Rbe-4D-Fq3" id="pIQ-hI-h0P"/>
+            </connections>
+            <point key="canvasLocation" x="323.1884057971015" y="147.99107142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bosta_logo" width="299" height="106"/>
+    </resources>
+</document>

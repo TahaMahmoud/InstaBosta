@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol ProfileCoordinatorProtocol: AnyObject {
-    func pushToAlbumDetails(with albumID: Int)
+    func pushToAlbumDetails(albumID: Int, albumTitle: String)
 }
 
 class ProfileCoordinator: Coordinator{
@@ -23,17 +23,19 @@ class ProfileCoordinator: Coordinator{
     
     func start() {
         let profileViewController = ProfileViewController()
-        var interactor: ProfileInteractorProtocol?
-        let profileViewModel = ProfileViewModel(profileInteractor: ProfileInteractor(), coordinator: self)
+        let interactor = ProfileInteractor()
+        let profileViewModel = ProfileViewModel(profileInteractor: interactor, coordinator: self)
         profileViewController.viewModel = profileViewModel
+        navigationController.navigationBar.isHidden = true
         navigationController.setViewControllers([profileViewController], animated: true)
     }
 }
 
 extension ProfileCoordinator: ProfileCoordinatorProtocol {
     
-    func pushToAlbumDetails(with albumID: Int) {
-
+    func pushToAlbumDetails(albumID: Int, albumTitle: String) {
+        let photosListViewCoordinator = PhotosListCoordinator(navigationController: navigationController, albumID: albumID, albumTitle: albumTitle)
+        photosListViewCoordinator.start()
     }
         
 }

@@ -56,7 +56,9 @@ class ProfileViewModel: ProfileViewModelOutput, ProfileViewModelInput {
     }
     
     func didAlbumSelected(_ indexPath: IndexPath) {
-        
+        let albumID = albums.value[indexPath.row].id ?? 0
+        let albumTitle = albums.value[indexPath.row].title ?? ""
+        coordinator.pushToAlbumDetails(albumID: albumID, albumTitle: albumTitle)
     }
 
     func userDataViewModel() -> UserDataViewModel {
@@ -69,7 +71,6 @@ class ProfileViewModel: ProfileViewModelOutput, ProfileViewModelInput {
     
     private func fetchUsers() {
         profileInteractor.fetchUsers().subscribe{ [weak self] (response) in
-            self?.indicator.onNext(false)
 
             // Select Random User
             guard let currentUser = response.element?.randomElement() else {
@@ -97,7 +98,7 @@ class ProfileViewModel: ProfileViewModelOutput, ProfileViewModelInput {
     }
     
     private func fetchAlbums() {
-        
+        indicator.onNext(true)
         guard let userID = selectedUser?.id else {
             error.onNext("Can't Fetch Albums")
             return

@@ -25,12 +25,6 @@ struct Constants {
         static let json = "application/json"
     }
 
-    enum Path {
-        static let users = "users"
-        static let albums = "albums"
-        static let photos = "photos"
-    }
-
     enum Parameter {
         static let userID = "userId"
         static let albumID = "albumId"

@@ -238,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				0F0005682837B958007104B5 /* Libraries */,
-				0F0005672837B951007104B5 /* Utils */,
 				0F0005662837B94B007104B5 /* UI */,
 				0F864CFF2837C713001B76FE /* Helper.swift */,
 			);
@@ -254,13 +253,6 @@
 				0F864D2828381E4C001B76FE /* CustomButton.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		0F0005672837B951007104B5 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		0F0005682837B958007104B5 /* Libraries */ = {

@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import Kingfisher
 
-class PhotosListViewController: UIViewController {
+class PhotosListViewController: UIViewController, UIGestureRecognizerDelegate {
 
     internal let disposeBag = DisposeBag()
     var viewModel: PhotosListViewModel!
@@ -22,6 +22,7 @@ class PhotosListViewController: UIViewController {
     @IBOutlet weak var searchText: UITextField!
         
     @IBOutlet weak var scrollView: ImageScrollView!
+    var imageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +44,17 @@ class PhotosListViewController: UIViewController {
     }
     
     func setupZoomScrollView() {
+        
         scrollView.setup()
         scrollView.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
         scrollView.addGestureRecognizer(tap)
     }
     
+    @objc func sharePressed(sender: UIButton!) {
+       print("Share tapped")
+    }
+
     func bindIndicator() {
         viewModel.indicator.subscribe { [weak self] status in
             status ? self?.showIndicator() : self?.hideIndicator()
@@ -92,13 +98,31 @@ class PhotosListViewController: UIViewController {
 
     func showFullScreen(photoURL: String) {
         guard let imageURL = URL(string: photoURL ) else {return}
-        let imageView = UIImageView()
         imageView.kf.setImage(with: imageURL)
         guard let image = imageView.image else { return }
+        
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed))
+        longPressRecognizer.minimumPressDuration = 0.5
+        longPressRecognizer.delaysTouchesBegan = true
+        longPressRecognizer.delegate = self
+        self.scrollView.addGestureRecognizer(longPressRecognizer)
+        
         scrollView.display(image: image)
         scrollView.isHidden = false
+    
+    }
+        
+        
+    @objc func longPressed(sender: UILongPressGestureRecognizer) {
+        // Share Image
+        if sender.state == .ended {
+            let items = [imageView.image]
+            let shareActivity = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            present(shareActivity, animated: true)
+        }
     }
 
+    
     @objc func dismissFullscreenImage(sender: UITapGestureRecognizer) {
         scrollView.isHidden = true
     }
